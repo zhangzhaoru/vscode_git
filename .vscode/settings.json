@@ -3,7 +3,8 @@
         "iostream": "cpp",
         "iosfwd": "cpp",
         "string": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "queue": "cpp"
     },
     "files.autoGuessEncoding": true
 }
