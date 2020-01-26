@@ -6,9 +6,9 @@
 using namespace std;
 
 priority_queue<int,vector<int>,less<int>> p;
-//从大到小进行排列
+//最大堆
 priority_queue<int,vector<int>,greater<int>> q;
-//从小到大进行排列
+//最小堆
 
 void Insert(int num ){
     if(p.empty() || num<=p.top())
