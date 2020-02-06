@@ -25,7 +25,7 @@ struct Greater {
 template <class T, class Compare = Less<T>>
 class Heap {
    public:
-    Heap()  //无参的构造函数（系统不会给无参构造函数），开始堆是空的不需要做什么事
+    Heap()
     {}
     Heap(T* a, size_t n) {
         _a.reserve(n);  //开空间
@@ -102,6 +102,9 @@ class Heap {
 };
 
 int main() {
+    Heap<int, Greater<int>> maxHeap;
+    maxHeap.Push(1);
+    cout<<maxHeap.Top()<<endl;
     int a[] = {10, 11, 13, 12, 16, 18, 15, 17, 14, 19};
     Heap<int, Greater<int>> hp1(a, sizeof(a) / sizeof(a[0]));
     //建立最大堆
