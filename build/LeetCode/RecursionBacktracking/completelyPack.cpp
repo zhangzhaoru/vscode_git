@@ -20,7 +20,7 @@ int main(){
     vector<int> V = {1,2,3,4,5};
     int m = 10;
     int res = backPack(m,W,V);
-    cout<<"the max tatol value is : "<<res<<endl;
+    cout<<"the max total value is : "<<res<<endl;
     system("pause");
     return 0;
 }
