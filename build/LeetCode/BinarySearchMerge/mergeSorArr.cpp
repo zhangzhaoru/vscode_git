@@ -29,7 +29,7 @@ int main() {
     vector<int> res;
     mergeSortVec(vec1, vec2, res);
     for (int i = 0; i < res.size(); i++) {
-        cout << res[i]<<" ";
+        cout << res[i] << " ";
     }
     cout << endl;
     return 0;

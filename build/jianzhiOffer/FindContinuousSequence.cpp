@@ -28,6 +28,7 @@ vector<vector<int>>  FindContinuousSequence(int sum){
      return res;
 }
 
+
 int main(){
     int sum = 100;
     vector<vector<int>> res;

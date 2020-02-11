@@ -11,9 +11,11 @@ vector<int> reserveNum(vector<int> &nums);
 vector<int> reserveNum(vector<int> &nums) {
     vector<pair<int, int>> vec;
     vector<int> count;
-    for (int i = 0; i < nums.size(); i++) {
+    int i = 0;
+    while (i < nums.size()) {
         vec.push_back(make_pair(nums[i], i));
         count.push_back(0);
+        i++;
     }
     mergeSort(vec, count);
     return count;
@@ -34,7 +36,7 @@ void mergeSort(vector<pair<int, int>> &vec, vector<int> &count) {
     }
     mergeSort(vec1, count);
     mergeSort(vec2, count);
-    vec.clear();//清空容器但不回收内存
+    vec.clear();
     mergeSortVec(vec1, vec2, vec, count);
 }
 
@@ -43,9 +45,9 @@ void mergeSortVec(vector<pair<int, int>> &vec1, vector<pair<int, int>> &vec2,
     int i = 0;
     int j = 0;
     while (i < vec1.size() && j < vec2.size()) {
-        if (vec1[i].first <= vec2[j].first) {
-            count[vec1[i].second] += j;
+        if (vec1[i].first <= vec[j].first) {
             vec.push_back(vec1[i]);
+            count[vec[i].second] += j;
             i++;
         } else {
             vec.push_back(vec2[j]);
@@ -53,7 +55,7 @@ void mergeSortVec(vector<pair<int, int>> &vec1, vector<pair<int, int>> &vec2,
         }
     }
     for (; i < vec1.size(); i++) {
-        count[vec1[i].second] += j;
+        count[vec[i].second] += j;
         vec.push_back(vec1[i]);
     }
     for (; j < vec2.size(); j++) {
