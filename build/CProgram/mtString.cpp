@@ -1,4 +1,4 @@
-//å®žçŽ°Stringç±»çš„æž„é€ å‡½æ•°
+//×Ô¶¨ÒåMyStringº¯Êý
 #include<iostream>
 #include<string>
 #include<string.h>
@@ -18,16 +18,17 @@ private:
 myString::myString(const char *str) {
 	if (str == NULL) {
 		ps = new char[1];
-        cout<<"æ— å‚æž„é€ "<<endl;
+        cout<<"ÎÞ²Î¹¹Ôì"<<endl;
 		ps[0] = '\0';
 	}
 	else {
 		int len = strlen(str) + 1;
 		ps = new char[len];
-        cout<<"æœ‰å‚æž„é€ "<<endl;
+        cout<<"ÓÐ²Î¹¹Ôì"<<endl;
 		strcpy(ps, str);
 	}
 }
+
 myString::~myString() {
 	delete[] ps;
 }
@@ -37,8 +38,8 @@ const char* myString::c_str()const {
 
 
 int main(){
-    string s1;
-    string s2("abc");
+    myString s1;
+    myString s2("abc");
     cout<<"-"<<s1.c_str()<<"-"<<endl;
     cout<<s2.c_str()<<endl;
     system("pause");
