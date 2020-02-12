@@ -1,3 +1,11 @@
+<!--
+ * @Author: Zhang Zhaoru
+ * @Since: 2020-02-11 11:25:56
+ * @LastTime     : 2020-02-12 23:28:09
+ * @LastAuthor   : Zhang Zhaoru
+ * @Path: \vscode_git\build\vscodeShortcutkey.md
+ * @Description: 
+ -->
 /*
  * @Author: ZhangZhaoru 
  * @Date: 2020-02-12 21:27:10 
@@ -39,7 +47,7 @@
 29. 停止程序 ctrl+alt+M
 30. 显示md文件 ctrl+K V
 31. 添加个人信息 ctrl+alt+I
-
+32. 快递修复 ctrl+DownArrow DownArrow
 
 
 
