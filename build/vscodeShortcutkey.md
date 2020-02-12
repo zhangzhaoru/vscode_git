@@ -1,3 +1,10 @@
+/*
+ * @Author: ZhangZhaoru 
+ * @Date: 2020-02-12 21:27:10 
+ * @Last Modified by: ZhangZhaoru
+ * @Last Modified time: 2020-02-12 21:27:30
+ */
+
 # vscode常用快捷键
 * 快捷键查询ctrl+shift+p
 
@@ -25,6 +32,14 @@
 22. 替换为文件 ctrl+shift+H
 23. 在右侧打开makedown预览 ctrl+K V
 24. 进入Zen模式 ctrl+K Z
+25. 添加(关闭)书签 ctrl+alt+K
+26. 书签跳转到下一个 ctrl+alt+J
+27. 书签跳转到上一个 ctrl+alt+K
+>28. 块代码注释 shift+alt+A
+29. 停止程序 ctrl+alt+M
+30. 显示md文件 ctrl+K V
+31. 添加个人信息 ctrl+alt+I
+
 
 
 

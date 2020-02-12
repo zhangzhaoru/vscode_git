@@ -82,5 +82,7 @@
         "typescriptreact",
         "yaml",
         "yml"
-    ]
+    ],
+    "fileheader.Author": "ZhangZhaoru",
+    "fileheader.LastModifiedBy": "ZhangZhaoru"
 }
