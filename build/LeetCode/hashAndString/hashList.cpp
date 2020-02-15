@@ -1,125 +1,107 @@
 /*
  * @Author: Zhang Zhaoru
  * @Since: 2020-02-13 15:22:13
- * @LastTime     : 2020-02-13 15:23:13
+ * @LastTime     : 2020-02-13 16:47:05
  * @LastAuthor   : Zhang Zhaoru
  * @Path: \vscode_git\build\LeetCode\hashAndString\hashList.cpp
- * @Description: ä½¿ç”¨æ‹‰é“¾æ³•å®ç°hashè¡¨
+ * @Description: Ê¹ÓÃÀ­Á´·¨ÊµÏÖhash±í
  */
+#include <malloc.h>
+#include <cmath>
 #include <iostream>
 #include <string>
 #include <vector>
-#include <cmath>
-#include <malloc.h>
 using namespace std;
 
-#define MAXTABLESIZE 10000 //å…è®¸å¼€è¾Ÿçš„æœ€å¤§æ•£åˆ—è¡¨é•¿åº¦
-#define KEYLENGTH 100      //å…³é”®å­—çš„æœ€å¤§é•¿åº¦
+#define MAXTABLESIZE 10000  //ÔÊĞí¿ª±ÙµÄ×î´óÉ¢ÁĞ±í³¤¶È
+#define KEYLENGTH 100       //¹Ø¼ü×ÖµÄ×î´ó³¤¶È
 
 typedef int ElementType;
-struct LNode
-{
+struct LNode {
     ElementType data;
     LNode *next;
 };
 typedef LNode *PtrToNode;
 typedef PtrToNode LinkList;
-struct TblNode
-{
-    int tablesize;  //è¡¨çš„æœ€å¤§é•¿åº¦
-    LinkList heads; //å­˜æ”¾æ•£åˆ—å•å…ƒæ•°æ®çš„æ•°ç»„
+struct TblNode {
+    int tablesize;   //±íµÄ×î´ó³¤¶È
+    LinkList heads;  //´æ·ÅÉ¢ÁĞµ¥ÔªÊı¾İµÄÊı×é
 };
 typedef struct TblNode *HashTable;
 
-/*è¿”å›å¤§äºnä¸”ä¸è¶…è¿‡MAXTABLESIZEçš„æœ€å°ç´ æ•°*/
-int NextPrime(int n)
-{
-    int p = (n % 2) ? n + 2 : n + 1; //ä»å¤§äºnçš„ä¸‹ä¸€ä¸ªå¥‡æ•°å¼€å§‹
+/*·µ»Ø´óÓÚnÇÒ²»³¬¹ıMAXTABLESIZEµÄ×îĞ¡ËØÊı*/
+int NextPrime(int n) {
+    int p = (n % 2) ? n + 2 : n + 1;  //´Ó´óÓÚnµÄÏÂÒ»¸öÆæÊı¿ªÊ¼
     int i;
-    while (p <= MAXTABLESIZE)
-    {
-        for (i = (int)sqrt(p); i > 2; i--)
-        {
-            if ((p % i) == 0)
-                break;
+    while (p <= MAXTABLESIZE) {
+        for (i = (int)sqrt(p); i > 2; i--) {
+            if ((p % i) == 0) break;
         }
         if (i == 2)
-            break; //è¯´æ˜æ˜¯ç´ æ•°ï¼Œç»“æŸ
+            break;  //ËµÃ÷ÊÇËØÊı£¬½áÊø
         else
             p += 2;
     }
     return p;
 }
 
-/*åˆ›å»ºæ–°çš„å“ˆå¸Œè¡¨*/
-HashTable CreateTable(int table_size)
-{
+/*´´½¨ĞÂµÄ¹şÏ£±í*/
+HashTable CreateTable(int table_size) {
     HashTable h = (HashTable)malloc(sizeof(TblNode));
     h->tablesize = NextPrime(table_size);
     h->heads = (LinkList)malloc(h->tablesize * sizeof(LNode));
-    //åˆå§‹åŒ–è¡¨å¤´ç»“ç‚¹
-    for (int i = 0; i < h->tablesize; i++)
-    {
+    //³õÊ¼»¯±íÍ·½áµã
+    for (int i = 0; i < h->tablesize; i++) {
         h->heads[i].next = NULL;
     }
     return h;
 }
 
-/*æŸ¥æ‰¾æ•°æ®çš„åˆå§‹ä½ç½®*/
-int Hash(ElementType key, int n)
-{
-    //è¿™é‡Œåªé’ˆå¯¹å¤§å°å†™
+/*²éÕÒÊı¾İµÄ³õÊ¼Î»ÖÃ*/
+int Hash(ElementType key, int n) {
+    //ÕâÀïÖ»Õë¶Ô´óĞ¡Ğ´
     return key % 11;
 }
 
-/*æŸ¥æ‰¾å…ƒç´ ä½ç½®*/
-LinkList Find(HashTable h, ElementType key)
-{
+/*²éÕÒÔªËØÎ»ÖÃ*/
+LinkList Find(HashTable h, ElementType key) {
     int pos;
 
-    pos = Hash(key, h->tablesize); //åˆå§‹æ•£åˆ—ä½ç½®
+    pos = Hash(key, h->tablesize);  //³õÊ¼É¢ÁĞÎ»ÖÃ
 
-    LinkList p = h->heads[pos].next; //ä»é“¾è¡¨çš„ç¬¬ä¸€ä¸ªèŠ‚ç‚¹å¼€å§‹
-    while (p && key != p->data)
-    {
+    LinkList p = h->heads[pos].next;  //´ÓÁ´±íµÄµÚÒ»¸ö½Úµã¿ªÊ¼
+    while (p && key != p->data) {
         p = p->next;
     }
 
     return p;
 }
 
-/*æ’å…¥æ–°çš„å…ƒç´ */
-bool Insert(HashTable h, ElementType key)
-{
-    LinkList p = Find(h, key); //å…ˆæŸ¥æ‰¾keyæ˜¯å¦å­˜åœ¨
-    if (!p)
-    {
-        //å…³é”®è¯æœªæ‰¾åˆ°ï¼Œå¯ä»¥æ’å…¥
+/*²åÈëĞÂµÄÔªËØ*/
+bool Insert(HashTable h, ElementType key) {
+    LinkList p = Find(h, key);  //ÏÈ²éÕÒkeyÊÇ·ñ´æÔÚ
+    if (!p) {
+        //¹Ø¼ü´ÊÎ´ÕÒµ½£¬¿ÉÒÔ²åÈë
         LinkList new_cell = (LinkList)malloc(sizeof(LNode));
         new_cell->data = key;
         int pos = Hash(key, h->tablesize);
         new_cell->next = h->heads[pos].next;
         h->heads[pos].next = new_cell;
         return true;
-    }
-    else
-    {
-        cout << "é”®å€¼å·²å­˜åœ¨ï¼" << endl;
+    } else {
+        cout << "¼üÖµÒÑ´æÔÚ£¡" << endl;
         return false;
     }
 }
 
-/*é”€æ¯é“¾è¡¨*/
-void DestroyTable(HashTable h)
-{
+/*Ïú»ÙÁ´±í*/
+void DestroyTable(HashTable h) {
     int i;
     LinkList p, tmp;
-    //é‡Šæ”¾æ¯ä¸ªèŠ‚ç‚¹
-    for (i = 0; i < h->tablesize; i++)
-    {
+    //ÊÍ·ÅÃ¿¸ö½Úµã
+    for (i = 0; i < h->tablesize; i++) {
         p = h->heads[i].next;
-        while (p)
-        {
+        while (p) {
             tmp = p->next;
             free(p);
             p = tmp;
@@ -129,21 +111,17 @@ void DestroyTable(HashTable h)
     free(h);
 }
 
-int main(int argc, char const *argv[])
-{
-    int a[] = {47, 7, 29,29, 11, 16, 92, 22, 8, 3, 50, 37, 89, 94, 21};
+int main(int argc, char const *argv[]) {
+    int a[] = {47, 7, 29, 29, 11, 16, 92, 22, 8, 3, 50, 37, 89, 94, 21};
     int n = 15;
     HashTable h = CreateTable(n);
-    for (int i = 0; i < n; i++)
-    {
-        Insert(h, a[i]); //æ’å…¥å…ƒç´ 
+    for (int i = 0; i < n; i++) {
+        Insert(h, a[i]);  //²åÈëÔªËØ
     }
-    for (int i = 0; i < h->tablesize; i++)
-    {
+    for (int i = 0; i < h->tablesize; i++) {
         LinkList p = h->heads[i].next;
-        while (p)
-        {
-            cout << p->data << " "; //æ‰“å°å“ˆå¸Œè¡¨å…ƒç´ 
+        while (p) {
+            cout << p->data << " ";  //´òÓ¡¹şÏ£±íÔªËØ
             p = p->next;
         }
         cout << endl;
