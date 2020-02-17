@@ -32,10 +32,44 @@ vector<vector<string>> groupAnagrams(vector<string> &strs) {
     return result;
 }
 
+/**
+ * @Name: groupAnagrams1
+ * @Param: map<vector<int>,vector<string>> anagram;
+ * @Return: 
+ * @Description: key为长度为26的的vector，统计单词各个自字符数量
+ */
+void changeToVector(string &str,vector<int> &vec){
+    for(int i = 0;i<26;i++){
+        vec.push_back(0);
+    }
+    for(int i = 0;i<str.length();i++){
+        vec[str[i]-'a']++;
+    }
+}
+
+vector<vector<string>> groupAnagrams1(vector<string> &strs) {
+    map<vector<int>,vector<string>> anagram;
+    vector<vector<string>> result;
+    for(int i = 0;i<strs.size();i++){
+        vector<int> vec;
+        changeToVector(strs[i],vec);
+        if(anagram.find(vec)==anagram.end()){
+            vector<string> item;
+            anagram[vec] = item;
+        }
+        anagram[vec].push_back(strs[i]);
+        map<vector<int>,vector<string>>::iterator it;
+        for(it = anagram.begin();it!=anagram.end();it++){
+            result.push_back((*it).second);
+        }
+        return result;
+    }     
+}
+
 int main() {
     vector<string> strs = {"asd", "sda", "dsa", "hjk", "jkh"};
     vector<vector<string>> res;
-    res = groupAnagrams(strs);
+    res = groupAnagrams1(strs);
     for (int i = 0; i < res.size(); i++) {
         for (int j = 0; j < res[i].size(); j++) {
             cout << res[i][j] << " ";
