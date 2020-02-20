@@ -9,6 +9,7 @@
 #include<iostream>
 #include<string>
 #include<vector>
+#define maxN 128
 using namespace std;
 
 /**
@@ -27,20 +28,19 @@ bool isComtain(int mapS[],int mapT[],vector<int> &vec){
 }
 
 string minimumWindowSubstring(string &s,string &t){
-    int mapS[128] = {0};
-    int mapT[128] = {0};
-    
+    int mapS[maxN] = {0};
+    int mapT[maxN] = {0};
     for(int i = 0;i<t.length();i++){
         mapT[t[i]]++;
     }
     vector<int> vec;
-    for(int i = 0;i<128;i++){
+    for(int i = 0;i<maxN;i++){
         if(mapT[i]>0){
             vec.push_back(i);
         }
     }
     int begin = 0;
-    string result;
+    string res ;
     for(int i = 0;i<s.length();i++){
         mapS[s[i]]++;
         while(begin<i){
@@ -56,12 +56,12 @@ string minimumWindowSubstring(string &s,string &t){
         }
         if(isComtain(mapS,mapT,vec)){
             int curLen = i-begin+1;
-            if(result==""||result.length()>curLen){
-                result = s.substr(begin,curLen);
+            if(res==""||res.length()>curLen){
+                res = s.substr(begin,curLen);
             }
         }
     }
-    return result;
+    return res;
 }
 
 int main(){

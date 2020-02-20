@@ -51,10 +51,10 @@
     "files.autoGuessEncoding": true,
     "cSpell.enabledLanguageIds": [
         "asciidoc",
-        "c",
         "cpp",
         "csharp",
         "css",
+        "diff",
         "git-commit",
         "go",
         "handlebars",
