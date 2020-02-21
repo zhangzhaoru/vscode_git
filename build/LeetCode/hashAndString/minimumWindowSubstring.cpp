@@ -1,9 +1,9 @@
 /*
  * @Author: Zhang Zhaoru
  * @Since: 2020-02-17 22:06:07
- * @LastTime: 2020-02-17 22:06:07
+ * @LastTime: 2020-02-20 22:54:05
  * @LastAuthor: Zhang Zhaoru
- * @Path: \vscode_git\build\LeetCode\hashAndString\minimumWindowSubstring.cpp
+ * @FilePath: \vscode_git\build\LeetCode\hashAndString\minimumWindowSubstring.cpp
  * @Description: 最小窗口子串
  */
 #include<iostream>
@@ -15,8 +15,8 @@ using namespace std;
 /**
  * @Name: isComtain
  * @Param: vec将字符串t中出现的字符保存在vec中
- * @Return: 
- * @Description: 判断字符串s是否包含字符串t 
+ * @Return:
+ * @Description: 判断字符串s是否包含字符串t
  */
 bool isComtain(int mapS[],int mapT[],vector<int> &vec){
     for(int i =0;i<vec.size();i++){
@@ -71,3 +71,5 @@ int main(){
     cout<<"the min windows substr is : "<<result<<endl;
     return 0;
 }
+
+
