@@ -123,7 +123,7 @@ TreeNode *deleteNode(TreeNode *root, int key) {
         deletenode(parent, node);
         return root;
     }
-    // ????????????
+    // 若为只有一个子树的根节点
     if (node->left) {
         node = node->left;
     } else {
