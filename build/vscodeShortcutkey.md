@@ -1,14 +1,14 @@
 <!--
  * @Author: Zhang Zhaoru
  * @Since: 2020-02-11 11:25:56
- * @LastTime     : 2020-02-13 16:27:54
- * @LastAuthor   : Zhang Zhaoru
- * @Path: \vscode_git\build\vscodeShortcutkey.md
- * @Description: 
+ * @LastTime: 2020-02-23 13:00:50
+ * @LastAuthor: Zhang Zhaoru
+ * @FilePath: \vscode_git\build\vscodeShortcutkey.md
+ * @Description:
  -->
 /*
- * @Author: ZhangZhaoru 
- * @Date: 2020-02-12 21:27:10 
+ * @Author: ZhangZhaoru
+ * @Date: 2020-02-12 21:27:10
  * @Last Modified by: ZhangZhaoru
  * @Last Modified time: 2020-02-12 21:27:30
  */
@@ -48,6 +48,9 @@
 30. 显示md文件 ctrl+K V
 31. 添加个人信息 ctrl+alt+I
 32. 快递修复 ctrl+DownArrow DownArrow
-
+33. 同时选择同一列元素 alt+shift
+34. 按住alt在多处进行光标选择
+35. 选择一段文字 shift+alt+int
+36. 同时替换相同词 ctrl+shift+Last
 
 

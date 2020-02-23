@@ -1,10 +1,14 @@
 /*
  * @Author: Zhang Zhaoru
  * @Since: 2020-02-22 18:21:42
- * @LastTime: 2020-02-22 23:24:37
+ * @LastTime: 2020-02-23 16:53:02
  * @LastAuthor: Zhang Zhaoru
- * @FilePath: \vscode_git\build\LeetCode\BinarySearchTree\BinarySearch.cpp
- * @Description: ??????????????????
+ * @FilePath: \vscode_git\build\LeetCode\BinarySearchTree\SerializeandDeserialize.cpp
+ * \vscode_git\build\LeetCode\BinarySearchTree\SerializeandDeserialize.cpp
+ * \vscode_git\build\LeetCode\BinarySearchTree\SerializeandDeserialize.cpp
+ * \vscode_git\build\LeetCode\BinarySearchTree\SerializeandDeserialize.cpp
+ * \vscode_git\build\LeetCode\BinarySearchTree\SerializeandDeserialize.cpp
+ * @Description: 二叉排序树的序列化与反序列化(前序遍历)
  */
 
 #include <stdio.h>
@@ -117,7 +121,7 @@ TreeNode *deleteNode(TreeNode *root, int key) {
         TreeNode *successor = findSuccessor(node, parent);
         deletenode(parent, successor);
         node->val = successor->val;
-        return root;//???????????????????
+        return root;  //???????????????????
     }
     if (parent) {
         deletenode(parent, node);
@@ -219,13 +223,65 @@ ostream &operator<<(ostream &output, vector<int> &v) {
     return output;
 }
 
+//////////////////////////////////////////////////////////////////
+// 前序遍历二叉查找树可以复原
+void changeInt2String(int val, string &str) {
+    string temp;
+    while (val) {
+        temp += (val % 10 + '0');
+        val = val / 10;
+    }
+    for (int i = temp.length() - 1; i >= 0; i--) {
+        str += temp[i];
+    }
+    str += '#';
+}
+
+void BST_preOrder(TreeNode *node, string &data) {
+    if (!node) {
+        return;
+    }
+    string str;
+    changeInt2String(node->val, str);
+    data += str;
+    BST_preOrder(node->left, data);
+    BST_preOrder(node->right, data);
+}
+
+string serialize(TreeNode *root) {
+    string data;
+    BST_preOrder(root, data);
+    return data;
+}
+
+TreeNode *deserialize(string data) {
+    if (data.length() == 0) {
+        return NULL;
+    }
+    vector<TreeNode *> nodeVec;
+    int val = 0;
+    for (int i = 0; i < data.length(); i++) {
+        if (data[i] == '#') {
+            nodeVec.push_back(new TreeNode(val));
+            val = 0;
+        } else {
+            val = val * 10 + data[i] - '0';
+        }
+    }
+    for (int i = 1; i < nodeVec.size(); i++) {
+        BST_insert(nodeVec[0], nodeVec[i]);
+    }
+    return nodeVec[0];
+}
+
 int main() {
     vector<int> data = {62, 88, 58, 47, 35, 73, 51, 99, 37, 93, 36, 39, 42, 62};
     TreeNode *root = CreateBST(data);
     midOrderPrint(root);
     cout<<endl;
-    root = deleteNode(root,99);
+    string res = serialize(root);
+    cout << res << endl;
+    root = deserialize(res);
     midOrderPrint(root);
-    cout << endl;
     return 0;
 }
