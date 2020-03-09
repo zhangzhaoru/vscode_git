@@ -1,3 +1,11 @@
+/*
+ * @Author: Zhang Zhaoru
+ * @Since: 2020-01-26 21:19:36
+ * @LastTime: 2020-03-07 19:46:25
+ * @LastAuthor: Zhang Zhaoru
+ * @FilePath: \vscode_git\build\jianzhiOffer\FindNumbersWithSum.cpp
+ * @Description: 
+ */
 //在递增数组中寻找两个数使得和等于目标值，两个数的
 #include<iostream>
 #include<vector>
@@ -19,6 +27,7 @@ vector<int> FindNumbersWithSum1(vector<int> array,int sum){
             res.push_back(array[i]);
             res.push_back(array[j]);
             return res;
+            
         }
     }
     return res;

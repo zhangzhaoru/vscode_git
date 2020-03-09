@@ -1,13 +1,9 @@
 /*
  * @Author: Zhang Zhaoru
  * @Since: 2020-02-22 18:21:42
- * @LastTime: 2020-02-23 16:53:02
+ * @LastTime: 2020-02-23 16:56:23
  * @LastAuthor: Zhang Zhaoru
  * @FilePath: \vscode_git\build\LeetCode\BinarySearchTree\SerializeandDeserialize.cpp
- * \vscode_git\build\LeetCode\BinarySearchTree\SerializeandDeserialize.cpp
- * \vscode_git\build\LeetCode\BinarySearchTree\SerializeandDeserialize.cpp
- * \vscode_git\build\LeetCode\BinarySearchTree\SerializeandDeserialize.cpp
- * \vscode_git\build\LeetCode\BinarySearchTree\SerializeandDeserialize.cpp
  * @Description: 二叉排序树的序列化与反序列化(前序遍历)
  */
 

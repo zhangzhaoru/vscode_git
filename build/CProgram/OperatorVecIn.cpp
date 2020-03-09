@@ -1,3 +1,11 @@
+/*
+ * @Author: Zhang Zhaoru
+ * @Since: 2020-02-12 18:26:38
+ * @LastTime: 2020-03-07 18:16:26
+ * @LastAuthor: Zhang Zhaoru
+ * @FilePath: \vscode_git\build\CProgram\OperatorVecIn.cpp
+ * @Description: 
+ */
 //容器输入输出重载
 #include <iostream>
 #include <map>
