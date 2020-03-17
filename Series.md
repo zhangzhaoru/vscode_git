@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhang Zhaoru
  * @Since: 2020-03-07 16:40:54
- * @LastTime: 2020-03-17 09:58:13
+ * @LastTime: 2020-03-17 12:45:28
  * @LastAuthor: Zhang Zhaoru
  * @FilePath: \undefinedd:\vscodegit\vscode_git\Series.md
  * @Description: 
@@ -71,3 +71,9 @@ condition = (condition || isPath(matrix, flags, str, i, j, rows, cols));短路运算
 16. FindFirstCommonNode 找到
 17. 2DArrSearch寻找目标数是否在二维数组中出现
 19. replaceSpace将字符串中空格替换为“%20”
+20. printListFromTailToHead将链表逆序转换为vector输出
+21. reConstructBinaryTree根据前序与中序序列建立树
+前序序列的第一个值是root，遍历vin将数组划分成左右子序列
+建立输的输出方式
+22. Stack2Queue 使用两个栈实现队列
+24. minNumberInRotateArray二分查找
