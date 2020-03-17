@@ -47,7 +47,8 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "typeinfo": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "bitset": "cpp"
     },
     "files.autoGuessEncoding": true,
     "cSpell.enabledLanguageIds": [
@@ -92,7 +93,9 @@
         "abcbasdasdasdas",
         "after",
         "countof",
+        "jianzhi",
         "numbers",
+        "offer",
         "safdaswadf",
         "self",
         "smaller"

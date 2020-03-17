@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhang Zhaoru
  * @Since: 2020-03-07 16:40:54
- * @LastTime: 2020-03-17 12:45:28
+ * @LastTime: 2020-03-17 20:54:53
  * @LastAuthor: Zhang Zhaoru
  * @FilePath: \undefinedd:\vscodegit\vscode_git\Series.md
  * @Description: 
@@ -76,4 +76,11 @@ condition = (condition || isPath(matrix, flags, str, i, j, rows, cols));短路运算
 前序序列的第一个值是root，遍历vin将数组划分成左右子序列
 建立输的输出方式
 22. Stack2Queue 使用两个栈实现队列
-24. minNumberInRotateArray二分查找
+23. minNumberInRotateArray寻找旋转数组的最小元素 二分查找
+24. Fibonacci递归实现Fibonacci数列
+25. artiSequence递归实现等差数列与等比数列之和
+26. jumpFloor递归实现跳台阶
+27. jumpFloor2递归实现跳台阶(单次跳阶数不限)
+28. rectCover递归实现2$*$1矩形覆盖2$*$n矩形
+29. NumberOf1统计二进制数的1的个数
+n = (n - 1) & n;将二进制代码中最第位1变为0
