@@ -1,3 +1,11 @@
+/*
+ * @Author: Zhang Zhaoru
+ * @Since: 2020-01-26 21:19:36
+ * @LastTime: 2020-03-10 21:06:10
+ * @LastAuthor: Zhang Zhaoru
+ * @FilePath: \build\jianzhiOffer\LeftRotateString.cpp
+ * @Description: 
+ */
 //左旋转字符串
 //两种方法实现字符串循环左移
 //1 使用substr提取子字符串重新组合

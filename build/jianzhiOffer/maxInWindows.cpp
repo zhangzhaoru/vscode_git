@@ -1,3 +1,11 @@
+/*
+ * @Author: Zhang Zhaoru
+ * @Since: 2020-01-27 09:47:35
+ * @LastTime: 2020-03-10 21:11:05
+ * @LastAuthor: Zhang Zhaoru
+ * @FilePath: \build\jianzhiOffer\maxInWindows.cpp
+ * @Description: 
+ */
 //找出所有滑动窗口里数值的最大值
 #include <iostream>
 #include <vector>

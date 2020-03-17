@@ -1,7 +1,7 @@
 /*
  * @Author: Zhang Zhaoru
  * @Since: 2020-03-08 19:22:00
- * @LastTime: 2020-03-08 19:28:28
+ * @LastTime: 2020-03-09 19:24:57
  * @LastAuthor: Zhang Zhaoru
  * @FilePath: \vscode_git\build\CProgram\funcPointer\funPointerArr.cpp
  * @Description: 函数指针数组
@@ -23,7 +23,7 @@ int product(int x,int y){
 int main() {
     int a = 5;
     int b = 8;
-    int (*p_func[3])(int,int) = {
+    int (*p_func[3])(int,int) = {   
         sum,
         difference,
         product

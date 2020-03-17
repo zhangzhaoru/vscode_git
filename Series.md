@@ -1,9 +1,9 @@
 <!--
  * @Author: Zhang Zhaoru
  * @Since: 2020-03-07 16:40:54
- * @LastTime: 2020-03-09 18:53:22
+ * @LastTime: 2020-03-17 09:58:13
  * @LastAuthor: Zhang Zhaoru
- * @FilePath: \vscode_git\Series.md
+ * @FilePath: \undefinedd:\vscodegit\vscode_git\Series.md
  * @Description: 
  -->
 # C 
@@ -62,6 +62,12 @@ istream& operator >> 重载>> 使得直接输入vector
  设置flags记录该位置是否以及使用过，
 condition = (condition || isPath(matrix, flags, str, i, j, rows, cols));短路运算类似与累加器
 以各个位置为起点判断，
-11. InversePairs判断数组中逆序数的个数 归并左中第i个数小于右区间j则i之后均小于j
-
-
+11. InversePairs判断数组中逆序数的个数 归并左中第i个数小于右区间j则i之后均小于j 先归并排序逆序数依次添加至数组，详reverseNumber
+12. LeftRotateString左旋字符串 方法1substr抓取前n个及后面的字符串，重新组合
+方法2：前n个翻转，后面翻转，整体翻转
+13. maxInWindows找出窗口中数值的最大值 
+14. PrintMinNumber将数组排列成最小的数 两两组合进行排列
+15. ReverseSentence 引入两个指针分别记录单词的头尾，翻转单词
+16. FindFirstCommonNode 找到
+17. 2DArrSearch寻找目标数是否在二维数组中出现
+19. replaceSpace将字符串中空格替换为“%20”

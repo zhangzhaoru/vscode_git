@@ -1,3 +1,11 @@
+/*
+ * @Author: Zhang Zhaoru
+ * @Since: 2020-02-10 10:33:44
+ * @LastTime: 2020-03-10 21:04:54
+ * @LastAuthor: Zhang Zhaoru
+ * @FilePath: \build\LeetCode\BinarySearchMerge\reverseNumber.cpp
+ * @Description: 
+ */
 //归并有序数组
 #include <iostream>
 #include <vector>
