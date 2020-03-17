@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhang Zhaoru
  * @Since: 2020-03-07 16:40:54
- * @LastTime: 2020-03-17 20:54:53
+ * @LastTime: 2020-03-17 22:59:06
  * @LastAuthor: Zhang Zhaoru
  * @FilePath: \undefinedd:\vscodegit\vscode_git\Series.md
  * @Description: 
@@ -84,3 +84,8 @@ condition = (condition || isPath(matrix, flags, str, i, j, rows, cols));短路运算
 28. rectCover递归实现2$*$1矩形覆盖2$*$n矩形
 29. NumberOf1统计二进制数的1的个数
 n = (n - 1) & n;将二进制代码中最第位1变为0
+30. Power计算指数函数
+31. string2int字符串与整形相互转化
+32. longNumAdd 长数据相加
+33. reOrderArray奇数偶数重新排序 类似冒泡排序法
+34. FindKthToTail发现倒数第k个节点
