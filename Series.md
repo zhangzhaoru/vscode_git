@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhang Zhaoru
  * @Since: 2020-03-07 16:40:54
- * @LastTime: 2020-03-17 22:59:06
+ * @LastTime: 2020-03-19 11:39:28
  * @LastAuthor: Zhang Zhaoru
  * @FilePath: \undefinedd:\vscodegit\vscode_git\Series.md
  * @Description: 
@@ -41,7 +41,7 @@ istream& operator >> 重载>> 使得直接输入vector
 应用回调函数实现 
 
 
-#jianzhiOffer
+# jianzhiOffer
 1. FindFirstCommonNode 发现链表首个公共节点将节点依次输入栈中，从后向前依次遍历
 2. FindContinuousSequence 输出所有和为S的连续整数序列 设置双指针，当前和小于目标大指针右移，否则小指针右移
 3. twosum 设置头尾双指针，和大右指针左移否则做指针右移
@@ -89,3 +89,7 @@ n = (n - 1) & n;将二进制代码中最第位1变为0
 32. longNumAdd 长数据相加
 33. reOrderArray奇数偶数重新排序 类似冒泡排序法
 34. FindKthToTail发现倒数第k个节点
+35. ReverseList头插法翻转链表
+36. Merge合并两个有序链表
+37. HasSubTree 判断树B是树A的子结构
+38. Mirror变换二叉树的镜像dfs
