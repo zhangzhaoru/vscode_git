@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhang Zhaoru
  * @Since: 2020-03-07 16:40:54
- * @LastTime: 2020-03-19 11:39:28
+ * @LastTime: 2020-03-20 13:56:26
  * @LastAuthor: Zhang Zhaoru
  * @FilePath: \undefinedd:\vscodegit\vscode_git\Series.md
  * @Description: 
@@ -93,3 +93,6 @@ n = (n - 1) & n;将二进制代码中最第位1变为0
 36. Merge合并两个有序链表
 37. HasSubTree 判断树B是树A的子结构
 38. Mirror变换二叉树的镜像dfs
+39. printMatrix顺时针打印数组
+40. StackMin实现带有min函数的栈
+41. isPopOrder判断出栈序列是否合法
