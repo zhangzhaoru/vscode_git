@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhang Zhaoru
  * @Since: 2020-03-07 16:40:54
- * @LastTime: 2020-03-20 13:56:26
+ * @LastTime: 2020-03-20 17:40:59
  * @LastAuthor: Zhang Zhaoru
  * @FilePath: \undefinedd:\vscodegit\vscode_git\Series.md
  * @Description: 
@@ -96,3 +96,6 @@ n = (n - 1) & n;将二进制代码中最第位1变为0
 39. printMatrix顺时针打印数组
 40. StackMin实现带有min函数的栈
 41. isPopOrder判断出栈序列是否合法
+42. VerifySquenceOfBST判断序列是否是二叉搜索树的后序遍历序列
+最后一个节点为root节点，遍历序列小于root连续节点为左子树，右子树中若有小于root的节点则返回false。递归遍历
+43. FindPath
