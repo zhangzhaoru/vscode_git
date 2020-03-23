@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhang Zhaoru
  * @Since: 2020-03-07 16:40:54
- * @LastTime: 2020-03-20 17:40:59
+ * @LastTime: 2020-03-22 10:03:27
  * @LastAuthor: Zhang Zhaoru
  * @FilePath: \undefinedd:\vscodegit\vscode_git\Series.md
  * @Description: 
@@ -98,4 +98,5 @@ n = (n - 1) & n;将二进制代码中最第位1变为0
 41. isPopOrder判断出栈序列是否合法
 42. VerifySquenceOfBST判断序列是否是二叉搜索树的后序遍历序列
 最后一个节点为root节点，遍历序列小于root连续节点为左子树，右子树中若有小于root的节点则返回false。递归遍历
-43. FindPath
+43. FindPath 判断二叉树路径之和是否等于目标数，递归
+44. RandomLists 复制随机指针链表，在各个节点之后插入复制指针，pClone->random = pNode->random->next  

@@ -1,17 +1,12 @@
 /*
  * @Author: Zhang Zhaoru
  * @Since: 2020-03-20 17:38:48
- * @LastTime: 2020-03-21 12:00:53
+ * @LastTime: 2020-03-21 18:50:12
  * @LastAuthor: Zhang Zhaoru
  * @FilePath: \vscode_git\build\jianzhiOffer\Tree\FindPath.cpp
  * @Description:
  */
-/*
- * @Author: ZhangZhaoru
- * @Date: 2020-02-12 21:07:26
- * @Last Modified by: ZhangZhaoru
- * @Last Modified time: 2020-02-12 21:32:16
- */
+
 
 #include <iostream>
 #include <queue>
