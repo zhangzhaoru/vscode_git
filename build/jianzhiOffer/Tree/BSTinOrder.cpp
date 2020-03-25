@@ -1,14 +1,13 @@
 /*
  * @Author: Zhang Zhaoru
- * @Since: 2020-03-22 10:05:00
- * @LastTime: 2020-03-24 13:34:16
+ * @Since: 2020-03-24 13:39:14
+ * @LastTime: 2020-03-24 14:07:45
  * @LastAuthor: Zhang Zhaoru
- * @FilePath: \vscode_git\build\jianzhiOffer\Tree\Convert.cpp
- * @Description: 将二叉搜索树转化为双向链表
+ * @FilePath: \vscode_git\build\jianzhiOffer\Tree\BSTinOrder.cpp
+ * @Description: 二叉搜索树中序遍历&&二叉搜索树转化为双向链表
  */
-
-
 #include <stdio.h>
+
 #include <iostream>
 #include <sstream>
 #include <vector>
@@ -18,6 +17,7 @@ void Swap(int *&pointer1, int *&pointer2);
 void qSort(int left, int right, vector<int> &v);
 istream &operator>>(istream &input1, vector<int> &v);
 ostream &operator<<(ostream &output, vector<int> &v);
+
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -118,7 +118,7 @@ TreeNode *deleteNode(TreeNode *root, int key) {
         TreeNode *successor = findSuccessor(node, parent);
         deletenode(parent, successor);
         node->val = successor->val;
-        return root;//???????????????????
+        return root;  //???????????????????
     }
     if (parent) {
         deletenode(parent, node);
@@ -133,7 +133,7 @@ TreeNode *deleteNode(TreeNode *root, int key) {
     return root;
 }
 
-// ???????????????
+// 中序输出
 void midOrderPrint(TreeNode *root) {
     if (!root) {
         return;
@@ -220,37 +220,42 @@ ostream &operator<<(ostream &output, vector<int> &v) {
     return output;
 }
 
-///////////////////////////////////////////////////////////
-TreeNode *Convert(TreeNode *pRoot){
-    if(pRoot== NULL)
-        return NULL;
-    TreeNode *pre  =NULL;
-    convert2Lists(pRoot,pre);
-    TreeNode *res = pRoot;
-    while(res->left){
-        res = res->left;
+//  按照右中左顺序遍历二叉排序
+void inOrder(TreeNode *pRootOfTree, vector<TreeNode *> &res) {
+    if (pRootOfTree == NULL) {
+        return;
     }
-    return res;
+    inOrder(pRootOfTree->left, res);
+    res.push_back(pRootOfTree);
+    inOrder(pRootOfTree->right, res);
 }
 
-void convert2Lists(TreeNode *cur,TreeNode *&pre){
-    if(cur==NULL)
-        return;
-    convert2Lists(cur->left,pre);
-    cur->left = pre;
-    if(pre)
-    pre->right = cur;
-    pre = cur;
-    convert2Lists(cur->right,pre);
+//二叉搜索树转化为双向链表
+TreeNode *Convert(TreeNode *pRootOfTree) {
+    if (pRootOfTree == NULL) return NULL;
+    vector<TreeNode *> res;
+    inOrder(pRootOfTree, res);
+    TreeNode *head = res[0];
+    head->left = NULL;
+    TreeNode *node = head;
+    for (int i = 1; i < res.size(); i++) {
+        TreeNode *temp = res[i];
+        temp->left = node;
+        node->right = temp;
+        node = temp;
+    }
+    node->right = NULL;
+    return head;
 }
 
 int main() {
-    vector<int> data = {62, 88, 58, 47, 35, 73, 51, 99, 37, 93, 36, 39, 42, 62};
+    vector<int> data = {2, 3, 5, 4, 6, 7};
+    vector<TreeNode *> res;
     TreeNode *root = CreateBST(data);
-    midOrderPrint(root);
-    cout<<endl;
-    root = deleteNode(root,99);
-    midOrderPrint(root);
-    cout << endl;
+    TreeNode *lists = Convert(root);
+    while(lists){
+        cout<<lists->val<<" ";
+        lists = lists->right;
+    }
     return 0;
 }
