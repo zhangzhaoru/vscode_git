@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhang Zhaoru
  * @Since: 2020-02-11 11:25:56
- * @LastTime: 2020-02-23 13:00:50
+ * @LastTime: 2020-03-25 23:06:53
  * @LastAuthor: Zhang Zhaoru
  * @FilePath: \vscode_git\build\vscodeShortcutkey.md
  * @Description:
@@ -52,5 +52,5 @@
 34. 按住alt在多处进行光标选择
 35. 选择一段文字 shift+alt+int
 36. 同时替换相同词 ctrl+shift+Last
-
+37. 翻译alt+T
 
