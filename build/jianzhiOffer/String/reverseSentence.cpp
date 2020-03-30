@@ -1,10 +1,10 @@
 /*
  * @Author: Zhang Zhaoru
  * @Since: 2020-03-26 10:31:27
- * @LastTime: 2020-03-26 11:26:50
+ * @LastTime: 2020-03-30 16:27:40
  * @LastAuthor: Zhang Zhaoru
  * @FilePath: \vscode_git\build\jianzhiOffer\String\reverseSentence.cpp
- * @Description: ·­×ª¾ä×Ó
+ * @Description: ??????????
  */
 #include <string.h>
 #include <iostream>
