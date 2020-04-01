@@ -1,15 +1,14 @@
 /*
  * @Author: Zhang Zhaoru
  * @Since: 2020-03-07 18:59:36
- * @LastTime: 2020-03-07 19:09:34
+ * @LastTime: 2020-04-01 20:53:23
  * @LastAuthor: Zhang Zhaoru
- * @FilePath: \vscodegit\vscode_git\build\LeetCode\theSum\twoSum.cpp
+ * @FilePath: \vscode_git\build\LeetCode\theSum\twoSum.cpp
  * @Description: 
  */
 #include<iostream>
 #include<vector>
 using namespace std;
-
 vector<pair<int,int>> twoSum(vector<int> nums,int target){
     vector<pair<int,int>> res;
     int i = 0;
