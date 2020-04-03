@@ -1,7 +1,7 @@
 /*
  * @Author: Zhang Zhaoru
  * @Since: 2020-04-03 15:44:25
- * @LastTime: 2020-04-03 20:02:43
+ * @LastTime: 2020-04-03 20:58:40
  * @LastAuthor: Zhang Zhaoru
  * @FilePath: \vscode_git\build\jianzhiOffer\String\num2String.cpp
  * @Description: 数字转化为英文
@@ -18,7 +18,6 @@ const string twenties[] = {"zero",  "ten",   "twenty",  "thirty", "forty",
                            "fifty", "sixty", "seventy", "eighty", "ninety"};
 const int ihundreds[] = {(int)1e3, (int)1e6, (int)1e9, (int)1e12};
 const string hundreds[] = {"thousand", "million", "billion"};
-
 
 //截取最高位3位数字
 long long exactFirst3Num(long long &num) {
@@ -77,26 +76,33 @@ string num2String(long long num) {
 }
 
 // 按3位进行计数
-int numlength(long long num){
+int numlength(long long num) {
     int res = 0;
-    while(num!=0){
-        num/=1000;
+    while (num != 0) {
+        num /= 1000;
         res++;
     }
     return res;
 }
 
 string combination(long long num) {
-    string res;
-    int length = numlength(num); 
-    long long num3 = 0;
-    int i;
-    for(i =length-2;i>=0;i--){
-        num3 = exactFirst3Num(num);
-        string str =  num2String(num3)+" "+ hundreds[i]+" ";
-        res+=str;
+    if(num==0){
+        return "zero";
     }
-    res+=num2String(num);
+    string res;
+    int length = numlength(num);
+    long long num3 = 0;
+    int flag = 1;
+    int i = length - 2;
+    while(i>=0) {
+        num3 = exactFirst3Num(num);
+        string str = num2String(num3) + " " + hundreds[i] + " ";
+        res += str;
+        length = numlength(num);
+        i = length-2;
+    } 
+    if(num)
+        res += num2String(num);
     return res;
 }
 
