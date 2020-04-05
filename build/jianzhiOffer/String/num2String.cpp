@@ -1,7 +1,7 @@
 /*
  * @Author: Zhang Zhaoru
  * @Since: 2020-04-03 15:44:25
- * @LastTime: 2020-04-03 20:58:40
+ * @LastTime: 2020-04-04 11:57:41
  * @LastAuthor: Zhang Zhaoru
  * @FilePath: \vscode_git\build\jianzhiOffer\String\num2String.cpp
  * @Description: 数字转化为英文
@@ -28,7 +28,7 @@ long long exactFirst3Num(long long &num) {
         num /= 10;
     }
     reverse(temp.begin(), temp.end());
-    //从低位到高位排列
+    //从高位排列
     int len = temp.size() % 3;
     long long res = 0;
     if (len == 0) {
