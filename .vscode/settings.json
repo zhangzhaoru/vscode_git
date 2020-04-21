@@ -105,6 +105,11 @@
     ],
     "cmake.configureOnOpen": false,
     "cSpell.words": [
-        "zhangsan"
-    ]
+        "zhang",
+        "zhangsan",
+        "zhaoru"
+    ],
+    "gitlens.advanced.messages": {
+    
+    }
 }

@@ -1,12 +1,27 @@
 /*
  * @Author: Zhang Zhaoru
  * @Since: 2020-04-18 18:25:22
- * @LastTime: 2020-04-18 19:25:53
+ * @LastTime: 2020-04-19 18:27:33
  * @LastAuthor: Zhang Zhaoru
  * @FilePath: \vscode_git\build\jianzhiOffer\Arr\pascalTriangle.cpp
  * @Description:
  */
-#include <bits\stdc++.h>
+#include <bits\stdc++.h>// 自动对称填充数组
+void symArr(vector<int> &nums) {
+    if (nums.size() % 2 == 0) {
+        int index = nums.size() / 2;
+        for (int i = index; i < nums.size(); i++) {
+            index--;
+            nums[i] = nums[index];
+        }
+    } else {
+        int index = nums.size() / 2;
+        for (int i = index + 1; i < nums.size(); i++) {
+            index--;
+            nums[i] = nums[index];
+        }
+    }
+}
 using namespace std;
 // 自动对称填充数组
 void symArr(vector<int> &nums) {

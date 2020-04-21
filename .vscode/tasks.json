@@ -10,7 +10,7 @@
     "showReuseMessage": true,
     "clear": false
   },
-  "args": ["-g","-Wall","-std=c++11","${file}", "${file}", "-o", "${fileDirname}\\${fileBasenameNoExtension}.exe"],
+  "args": ["-g", "${file}", "-o", "${fileDirname}\\${fileBasenameNoExtension}.exe"],
   "problemMatcher": {
     "owner": "cpp",
     "fileLocation": ["relative", "${workspaceRoot}"],
